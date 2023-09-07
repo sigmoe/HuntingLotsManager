@@ -13,5 +13,5 @@ repository=https://github.com/sigmoe/HuntingLotsManager
 icon=icons/sgm_hunting.png
 experimental=False
 changelog=
- <i>Version 1.0.0 - 2023/09/07</i>
+ <i>Version 1.0.0 - 2023/09/07 </i>
  * First public version
