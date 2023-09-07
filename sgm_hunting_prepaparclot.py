@@ -73,17 +73,19 @@ class PrepaParcLot:
         self.pgb_val = 0
         
         # Initialization
-        parc_lyr = self.project.mapLayersByName(parc_lyrname)[0]
-        lot_lyr = self.project.mapLayersByName(self.lot_lyrname)[0]
-        parclyr_al = get_layer_fields_alias(parc_lyr)
-        lot_lyr_al = get_layer_fields_alias(lot_lyr)
-        if not parc_lyr.isValid() or not lot_lyr.isValid():
+        parc_lyr_m = self.project.mapLayersByName(parc_lyrname)
+        lot_lyr_m = self.project.mapLayersByName(self.lot_lyrname)
+        if len(parc_lyr_m) == 0 or len(lot_lyr_m) == 0:
             QMessageBox.warning(
                                     self.feedback, 
                                     alert_lyr_msg_txt[0], 
                                     alert_lyr_msg_txt[1].format(parc_lyrname, self.lot_lyrname)
                                     )
         else:
+            parc_lyr = parc_lyr_m[0]
+            lot_lyr = lot_lyr_m[0]
+            parclyr_al = get_layer_fields_alias(parc_lyr)
+            lot_lyr_al = get_layer_fields_alias(lot_lyr)
             try:
                 # If necessary, creates new snapping Lots on Parcelles layer
                 self.send_msg(crelyr_msg_txt[0])
@@ -214,6 +216,9 @@ class PrepaParcLot:
                 add_cat_symb(nwlots_lyr, self.lot_attname, ramp_c, cat_label)
                 
                 nwlots_lyr.triggerRepaint()
+                
+                self.canvas.setExtent(nwlots_lyr.extent())
+                self.canvas.refresh()
                 
                 # End message
                 self.send_msg(crelyr_msg_txt[9])

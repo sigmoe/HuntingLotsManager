@@ -78,15 +78,17 @@ class ExportXl:
             Launch the process once the msg window is validated
         '''
         # Starts the export only if the new chasse layers exists
-        parclot_lyr = self.project.mapLayersByName(self.parclot_lyrname)[0]
-        nwlot_lyr = self.project.mapLayersByName(self.nwlots_lyrname)[0]
-        if not parclot_lyr.isValid() or not nwlot_lyr.isValid():
+        parclot_lyr_m = self.project.mapLayersByName(self.parclot_lyrname)
+        nwlot_lyr_m = self.project.mapLayersByName(self.nwlots_lyrname)
+        if len(parclot_lyr_m) == 0 or len(nwlot_lyr_m) == 0:
             QMessageBox.warning(
                                     self.feedback, 
                                     alert_lyr_msg_txt[0], 
-                                    alert_lyr_msg_txt[1].format(parc_lyrname, self.lot_lyrname)
+                                    alert_lyr_msg_txt[1].format(self.parclot_lyrname, self.nwlots_lyrname)
                                     )
         else:
+            parclot_lyr = parclot_lyr_m[0]
+            nwlot_lyr = nwlot_lyr_m[0]
             # Finds the list of Lots
             lot_lst = get_fldval_sorted(nwlot_lyr, self.lot_attname)
             # Initializes progressbar
