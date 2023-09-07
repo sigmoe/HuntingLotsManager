@@ -1,5 +1,5 @@
 # HuntingLotsManager
-QGIS 3 Plugin : Only for French people for hunting lots management (for Alasace/Moselle cities).
+QGIS 3 Plugin : Only for French people for hunting lots management (for Alsace/Moselle cities).
 Description
 ===========
 **HuntingLotsManager** is a QGIS plugin which provides functions allowing you to define the cadastral surface of hunting lots and to extract the list of parcels concerned by each hunting lot, as an Excel® file. This plugin is specially dedicated to the definition of hunting lots for the management of the rental of municipal hunting in the cities of Alsace / Moselle (France).
