@@ -1,11 +1,17 @@
 [general]
 name=Chasse - Gestion des lots
 email=em@sigmoe.fr
-author=Etienne MORO
+author=SIGMOÉ - Etienne MORO
 qgisMinimumVersion=3.28
 description=Fonctions permettant de définir la surface cadastrale des lots de chasse et d'extraire la liste des parcelles concernées par chaque lot de chasse, sous forme de fichier Excel®.
 about=Cette extension fournit plusieurs fonctions utiles à la gestion de la location des chasses communales pour la définition des lots de chasse. Extension spécialement destinée aux communes d'Alsace / Moselle (France).
 version=1.0.0
 tags=chasse,alsace,moselle,sigmoé,sigmoe
+homepage=https://www.youtube.com/channel/UClUpHv_-RRZ4KLg_U6IArYg
+tracker=https://github.com/sigmoe/HuntingLotsManager/issues
+repository=https://github.com/sigmoe/HuntingLotsManager
 icon=icons/sgm_hunting.png
 experimental=False
+changelog=
+ <i>Version 1.0.0 - 2023/09/07</i>
+ * First public version
