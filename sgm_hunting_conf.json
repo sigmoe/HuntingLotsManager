@@ -1,0 +1,13 @@
+{
+    "params": {
+        "lot_lyrname_led": "LOTS CHASSE",
+        "lot_attname_led": "LOT_NUM",
+        "dist_max_spb": 1.8,
+        "parclot_lyrname_led": "Parcelles par lot de chasse",
+        "nwlots_lyrname_led": "Lots de chasse calculés",
+        "export_rep_led": "C:/DummyDir/_Chasse",
+        "export_fname_led": "Liste parcelles par lot de chasse",
+        "att_export_led": "'nomcommune','left(idu,3)','substr(idu,4,3)','substr(idu,7,2)','tex','surface_geo','contenance','LOT_NUM','surface_geo_chasse','contenance_chasse'",
+        "hd_export_led": "Commune,Code commune,Préfixe Section,Section,Numéro parcelle,Surface dessin parcelle, Contenance cadastrale parcelle,Lot de chasse,Surface dessin chasse,Contenance cadastrale chasse"
+    }
+}

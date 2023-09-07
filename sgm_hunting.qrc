@@ -1,0 +1,8 @@
+<RCC>
+    <qresource lang="fre">
+        <file alias="sgm_hunting">icons/sgm_hunting.png</file>
+        <file alias="sgm_hunting_prepaparclot">icons/sgm_hunting_prepaparclot.png</file>
+        <file alias="sgm_hunting_crerapport">icons/sgm_hunting_crerapport.png</file>
+        <file alias="sgm_hunting_conf">icons/sgm_hunting_conf.png</file>
+    </qresource>
+</RCC>
