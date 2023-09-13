@@ -9,7 +9,7 @@
     *                hunting lots
     * Specific lib:  none
     * First release: 2023-09-01
-    * Last release:  2023-09-07
+    * Last release:  2023-09-08
     * Copyright:     (C)2023 SIGMOE
     * Email:         em at sigmoe.fr
     * License:       GPL
@@ -147,11 +147,14 @@ class PrepaParcLot:
                             parclot_surf = parclot_psurf
                     update_attval(parclot_lyr, obj, add_fldnames[0], parclot_surf)
                     update_attval(parclot_lyr, obj, add_fldnames[1], parclot_cont)
+                    # Eliminates 0 m² parcels
+                    if parclot_cont == 0:
+                        parclot_lyr.deleteFeature(obj.id())
+                    
                 parclot_lyr.commitChanges()
                 
                 # Creates alias
                 al_map = parclyr_al + lot_lyr_al + [[fdn, add_fldalias[i]] for i, fdn in enumerate(add_fldnames)] + [[tot_fldname, tot_fldalias]]
-                print(f"al_map: {al_map}")
                 create_alias(parclot_lyr, al_map)
                 
                 # Moves layer to the top (layer order)
